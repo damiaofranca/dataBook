@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+*::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #8a8a8a; 
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background: rgb(39 39 39); 
+  transition: all 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(66, 66, 66); 
+}
+

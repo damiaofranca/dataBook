@@ -1,0 +1,69 @@
+<div class="background-image">
+  <div class="logo">
+    <label>Logo</label>
+  </div>
+  <div class="text-title">
+    <label>Gerencie da forma que quiser!</label>
+  </div>
+  <div class="form-container col-lg-3">
+    <div class="form-title">
+      <h1>Entrar</h1>
+    </div>
+    <div class="form-submit">
+      <div [formGroup]="formSignIn">
+        <div class="form-group-input">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="email"
+            formControlName="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group-input input-container-password">
+          <label for="password">senha</label>
+          <input
+            type="{{ showPassWord ? 'text' : 'password' }}"
+            class="password"
+            formControlName="password"
+            name="password"
+            required
+          />
+          <img
+            src="{{
+              showPassWord
+                ? '../../../assets/icons/eye-outline.svg'
+                : '../../../assets/icons/eye-off-2-outline.svg'
+            }}"
+            alt="eye"
+            (click)="showPassword()"
+          />
+        </div>
+        <div class="forget-password">
+          <label routerLink="/auth/forgot-password"
+            >Esqueci a senha? clique aqui!</label
+          >
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn-submit" (click)="onSubmit()">
+            Entrar
+          </button>
+          <div class="or">
+            <span>Continue com</span>
+          </div>
+          <div class="with-google">
+            <img
+              (click)="signWithGoogle()"
+              src="../../../assets/icons/logo-google.svg"
+              alt="logo-google"
+            />
+          </div>
+          <div class="create-user-Router">
+            <label routerLink="/auth/sign-up">Não tem uma conta? crie uma.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

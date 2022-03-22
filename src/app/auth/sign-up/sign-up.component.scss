@@ -1,0 +1,161 @@
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../../assets/images/wave-second.svg");
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-title > label {
+  word-break: break-word;
+  font-size: 2.2rem;
+}
+
+.form-container {
+  background-color: #bae1e9;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.btn-submit {
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.4rem;
+  background-color: #fff;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  transition: all 0.05s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #000;
+  color: #fff ;  
+}
+.or {
+  display: flex;
+  justify-content: center;
+}
+
+.or > span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.with-google {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  color: #fff;
+}
+
+.form-group-input > label {
+  color: #fff;
+}
+
+.form-group-input > input {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  color: #7f7f7f;
+  background-color: #ffff;
+  margin: 0;
+  padding: 0 0.2rem;
+  outline: none;
+}
+
+.form-group-input > input:focus {
+  outline: none;
+}
+
+.with-google > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 570px) {
+  .text-title > label {
+    font-size: 6vw;
+  }
+}
+.logo {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.logo > label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.text-title {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.text-title > label {
+  width: 100%;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.create-user-Router > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-container-password {
+  position: relative;
+}
+
+.input-container-password > img {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}

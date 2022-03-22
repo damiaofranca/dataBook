@@ -1,0 +1,37 @@
+<div class="container-menu">
+  <div class="logo">Logo</div>
+  <div class="menu">
+    <div class="container-link">
+      <li class="menu-link" routerLink="/home">Inicio</li>
+      <li class="menu-link" routerLink="/favorites">Favoritos</li>
+      <li class="menu-link" (click)="logOut()">Sair</li>
+    </div>
+  </div>
+  <div class="menu-mobile">
+    <svg xmlns="http://www.w3.org/2000/svg" (click)="toggleMenu()" class="icon-menu" fill="#fff" viewBox="0 0 24 24">
+      <g data-name="Layer 2">
+        <g data-name="menu">
+          <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
+          <rect x="3" y="11" width="18" height="2" rx=".95" ry=".95" />
+          <rect x="3" y="16" width="18" height="2" rx=".95" ry=".95" />
+          <rect x="3" y="6" width="18" height="2" rx=".95" ry=".95" />
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div *ngIf="isOpenMenu === true" class="menu-float">
+  <div class="col-9 container-float">
+    <div class="info-container">
+      <p>Menu</p>
+      <img src="../../../assets/icons/close-outline.svg" (click)="toggleMenu()" alt="close-icon" />
+    </div>
+    <div class="link-mobile-container">
+      <div class="link-mobile" (click)="goToHome()">Inicio</div>
+      <div class="link-mobile" (click)="goToFavorites()">Favoritos</div>
+      <div class="link-mobile" (click)="goToProfile()">Perfil</div>
+      <div class="link-mobile" (click)="logOut()">Sair</div>
+    </div>
+  </div>
+</div>

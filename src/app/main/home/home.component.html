@@ -1,0 +1,32 @@
+<div class="container-home">
+  <div class="row container-sub-bar">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+      <h3 class="title-page">Início</h3>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-8 col-10  container-search">
+      <img src="../../../assets/icons/search-outline.svg" alt="search-icon" />
+      <input type="text" #searchGamesInput />
+    </div>
+  </div>
+
+  <div class="row container-content">
+    <div *ngIf="games === undefined">
+      <div class="noData">
+        <p>Carregando...</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-10 card-container" *ngFor="let game of games;let idx = index;">
+      <div class="card-image">
+        <img src="{{game.background_image}}" alt="{{game.name}}" title="{{game.name}}" />
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">{{onFormatNameBigger(game.name)}}</h3>
+        <p class="card-description">Criado em: {{ onFormatDate(game.released)}}</p>
+        <p class="card-description-metacritic">Metracritic: {{ game.metacritic}}</p>
+        <div class="see-more-container">
+          <p class="see-more" (click)="goToDescriptionGame(game.id)">Ver mais</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

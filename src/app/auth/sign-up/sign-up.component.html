@@ -1,0 +1,61 @@
+<div class="background-image">
+  <div class="logo">
+    <label>Logo</label>
+  </div>
+  <div class="text-title">
+    <label>A facilidade como sempre quis.</label>
+  </div>
+  <div class="form-container col-lg-3">
+    <div class="form-title">
+      <h1>Registrar</h1>
+    </div>
+    <div class="form-submit">
+      <div [formGroup]="formSignUp">
+        <div class="form-group-input">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="email"
+            formControlName="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group-input input-container-password">
+          <label for="password">senha</label>
+          <input
+            type="{{ showPassWord ? 'text' : 'password' }}"
+            class="password"
+            formControlName="password"
+            name="password"
+            required
+          />
+          <img
+            src="{{
+              showPassWord
+                ? '../../../assets/icons/eye-outline.svg'
+                : '../../../assets/icons/eye-off-2-outline.svg'
+            }}"
+            alt="eye"
+            (click)="showPassword()"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn-submit">Registar</button>
+          <div class="or">
+            <span>Continue com</span>
+          </div>
+          <div class="with-google">
+            <img
+              src="../../../assets/icons/logo-google.svg"
+              alt="logo-google"
+            />
+          </div>
+          <div class="create-user-Router">
+            <label routerLink="/auth/sign-in">Já tem uma conta? entre agora.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

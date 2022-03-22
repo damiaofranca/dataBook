@@ -1,0 +1,50 @@
+<div class="container-description">
+  <div *ngIf="descriptionGame !== undefined">
+    <img
+    [src]="descriptionGame.background_image"
+    class="img-background"
+    alt="img-background"
+  />
+    <div class="container-content">
+      <div class="content-bar-sub">
+          <div class="container-title">
+              <h3>
+                {{ descriptionGame.name }}
+              </h3>
+              <img [src]="verifyIfIsFavorite" (click)="favoriteGame()" alt="img-game">
+          </div>
+            <div class="container-description-game">
+                <p>
+                   Descrição: {{ onFormatDescriptionBigger(descriptionGame.description_raw) }}
+                </p>
+      </div>
+    </div>
+        <div class="container-rating">
+            <div class="container-rating-title">
+            <h3>
+                Avaliações
+            </h3>
+            </div>
+            <div class="container-rating-content">
+            <div class="container-rating-content-item" *ngFor="let ratingResults of descriptionGame.ratings">
+                <p>{{ratingResults.title}}: {{ratingResults.percent}}</p>
+            </div>
+            </div>
+        </div>
+
+    <div class="parent_platforms">
+        <div class="container-platforms">
+            <div class="container-platforms-title">
+            <h3>
+                Plataformas
+            </h3>
+            </div>
+            <div class="container-platforms-content">
+            <div class="container-platforms-content-item" *ngFor="let plaformAccepted of descriptionGame.parent_platforms">
+                <p>{{plaformAccepted.platform.name}}</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

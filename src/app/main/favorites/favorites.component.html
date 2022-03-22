@@ -1,0 +1,33 @@
+<div class="container-favorites">
+    <div class="row container-sub-bar">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+            <h3 class="title-page">Favoritos</h3>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-10  container-search">
+            <img src="../../../assets/icons/search-outline.svg" alt="search-icon" />
+            <input type="text" #searchGamesFavoritesInput />
+        </div>
+    </div>
+
+    <div class="row container-content">
+        <div *ngIf="gamesFavorites.length === 0">
+            <div class="noData">
+                <p>Carregando...</p>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-10 card-container"
+            *ngFor="let game of gamesFavorites;let idx = index;">
+            <div class="card-image">
+                <img src="{{game.data.image}}" alt="{{game.data.name}}" title="{{game.data.name}}" />
+            </div>
+            <div class="card-info">
+                <h3 class="card-title">{{onFormatNameBigger(game.data.name)}}</h3>
+                <p class="card-description">Criado em: {{ onFormatDate(game.data.released)}}</p>
+                <p class="card-description-metacritic">Metracritic: {{ game.data.metacritic}}</p>
+                <div class="see-more-container">
+                    <p class="see-more" (click)="goToDescriptionGame(game.data.id)">Ver mais</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
