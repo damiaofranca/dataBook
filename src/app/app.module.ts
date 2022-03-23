@@ -37,4 +37,4 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [AuthService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

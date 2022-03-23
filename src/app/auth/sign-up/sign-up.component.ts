@@ -17,9 +17,9 @@ export class SignUpComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private toastr: ToastrService
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onSubmit() {
     if (this.formSignUp.valid) {
@@ -29,7 +29,7 @@ export class SignUpComponent implements OnInit {
       );
     } else {
       this.toastr.error('Por favor, preencha todos os campos!', 'Error', {
-        positionClass: 'toast-bottom-left',
+        positionClass: 'toast-top-right',
       });
     }
   }
